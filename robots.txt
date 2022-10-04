@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /template.php
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /node_modules/*
+Disallow: /includes/*
+Disallow: /css/style-old.css

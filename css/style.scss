@@ -1,0 +1,329 @@
+$nhas-green: #00aa44;
+$nhas-nude-light: #deaa87;
+$nhas-nude-dark: #cc7b45;
+$nhas-red: #ff8080;
+$nhas-orange: #f39b61;
+$nhas-yellow: #f3d661;
+$nhas-leafgreen: #31c874;
+$nhas-blue: #00aad4;
+$nhas-seagreen: #00d4aa;
+$nhas-purple: #c387d2;
+$nhas-periwinkle: #8080ff;
+$nhas-swampgreen: #73c831;
+$faded-green: #85bb8e;
+
+$sm-min-width: 576px;
+$md-min-width: 768px;
+$lg-min-width: 992px;
+$xl-min-width: 1200px;
+
+$carousel-item-height: 900px;
+
+@mixin zero-margin($pad-up-dn, $pad-left-right) {
+    margin: 0px auto;
+    padding: $pad-up-dn $pad-left-right;
+}
+
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+main {
+    padding-top: 80px;
+}
+
+body {
+    padding: 50px 0px 0px 0px;
+    z-index: 0;
+}
+
+address {
+    font-size: 80%;
+    margin: 0px;
+    color: #0f0f0f;
+}
+
+.row-header {
+    @include zero-margin(0px, 0px);
+}
+
+.row-content {
+    @include zero-margin(50px, 0px);
+    // border-bottom: 1px ridge;
+    min-height: 400px;
+}
+
+.footer-main {
+    @include zero-margin(20px, 0px);
+    background: url("../media/graphics/background-location.png");
+    color: #fff;
+    address {
+        color: #fff;
+    }
+}
+
+.copyright {
+  background-color: #4c5c65;
+  width: 100%;
+  color: #fff;
+  padding: 15px;
+}
+
+.jumbotron {
+    // @include zero-margin(70px, 30px);
+    color: floralwhite;
+    // background: url("../media/graphics/background-location.png") 0 center no-repeat;
+    background-size: 100% 100%;
+    min-height: 600px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.active {
+    color: $nhas-green;
+}
+
+.tab-content {
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    padding: 10px;
+}
+
+#my-carousel {
+    background: #4c5c65;
+    width: 100%;
+    margin-top: 50px;
+    .carousel-item {
+        height: 600px;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-height: 600px;
+            width: 100%;
+            visibility: hidden;
+        }
+    }
+}
+
+#testimonial-carousel {
+    background: #4c5c65;
+    width: 50%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 250px;
+    min-width: 500px;
+    .carousel-item {
+        height: 150px;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        .testimonial-text {
+            position: absolute;
+            top: 50;
+            // left: 0;
+            min-height: 600px;
+            width: 100%;
+        }
+    }
+    .row {
+        margin: auto;
+    }
+}
+
+.modal-header {
+    color: floralwhite;
+    .close {
+        color: floralwhite;
+    }
+}
+
+.modal-body {
+    background: $faded-green;
+}
+
+.page-title, .card h5 {
+    text-align: center;
+    color: $nhas-green;
+	font-size: 22px;
+}
+
+.page-subtitle-descr {
+    text-align: center;
+}
+
+footer {
+    .footer-logo {
+        width: 80px;
+    }
+    img {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 15px; }
+    .footer-inner {
+        text-align: center;
+        padding-top: 120px;
+        padding-bottom: 120px; }
+}
+
+.footer-home-link {
+  color: #fff;
+  font-size: 28px;
+  background-image: url('media/graphics/background-location.png'); }
+
+.slide-text {
+    background-color: rgba(87, 171, 120, 0.7);
+    border: #fff solid 2px;
+    padding: 10px;
+    p {
+        color: #fff;
+        font-size: 20px;
+    }
+}
+
+.location-wrapper {
+    .section-inner {
+        padding-top: 56px;
+        padding-bottom: 56px;
+    }
+  }
+
+.location-wrapper-inner {
+    background-color: #4c7f57;
+}
+
+.location-wrapper-info {
+    padding: 30px 50px;
+    color: #fff;
+}
+
+.location-name {
+    font-size: 36px;
+    padding-bottom: 8px;
+}
+
+.location-shopping-center {
+    font-size: 24px;
+    padding-bottom: 8px;
+}
+
+.location-address {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    padding-left: 18px;
+    line-height: 1.5;
+    font-size: 20px;
+    border-left: 3px solid #fff;
+}
+
+.location-hours {
+    font-size: 24px;
+    line-height: 1.5;
+    padding-bottom: 20px;
+}
+
+.location-number {
+    font-size: 26px;
+    line-height: 1.5; 
+    a {
+        color: #fff;
+    }
+}
+
+.card-text {
+    color: #4c5c65;
+}
+
+.card {
+    cursor:pointer;
+    &:hover {
+        .card-body {
+            box-shadow: 0px 0px 4px 5px #e8faeb inset;
+        }
+        .card-footer {
+            background-color: $faded-green;
+        }
+        .testiminal-body {
+            box-shadow: 0px 0px 4px 5px #343a40 inset !important;
+        }
+        .testimonial-author {
+            background-color: #343a40;
+            color: #fff;
+        }
+    }
+}
+
+a[href^="tel:"], a[href^="mailto:"] {
+    color: inherit;
+    &:link, &:hover, &:active, &:visited {
+        color: inherit !important;
+    }
+    &:hover {
+        text-decoration: none !important;
+    }
+}
+
+.nav-link, .nav-item {
+    &:hover {
+        background-color: #a1fccab9;
+    }
+}
+
+.footer-copyright {
+    overflow: hidden !important;
+    background-color: rgba(0, 0, 0, .7) !important;
+    color: rgba(255, 255, 255, .6) !important;
+    // height: 60px;
+    // position: absolute;
+    // bottom: 0;
+    p {
+        padding-top: 10px;
+        vertical-align: middle;
+    }
+}
+
+#homejumbo {
+    padding: 0px 0px 0px 0px;
+    .carousel-caption {
+        text-shadow: 0px 0px 3px #000;
+    }
+}
+
+.book-button {
+    cursor: pointer;
+}
+
+@media screen and (max-width: $lg-min-width) {
+    .navbar-brand, .footer-logo {
+        transform: scale(0.75, 0.75);
+        -moz-transform: scale(0.75, 0.75); /* Firefox */
+        -ms-transform: scale(0.75, 0.75); /* IE */
+        -webkit-transform: scale(0.75, 0.75); /* Safari */
+    }
+}
+@media screen and (max-width: $md-min-width) {
+    .navbar-brand, .footer-logo {
+        transform: scale(0.60, 0.60);
+        -moz-transform: scale(0.60, 0.60); /* Firefox */
+        -ms-transform: scale(0.60, 0.60); /* IE */
+        -webkit-transform: scale(0.60, 0.60); /* Safari */
+    }
+}
+@media screen and (max-width: $sm-min-width) {
+    .navbar-brand, .footer-logo {
+        transform: scale(0.50, 0.50);
+        -moz-transform: scale(0.50, 0.50); /* Firefox */
+        -ms-transform: scale(0.50, 0.50); /* IE */
+        -webkit-transform: scale(0.50, 0.50); /* Safari */
+    }
+    .navbar-text {
+        display: none;
+    }
+}
